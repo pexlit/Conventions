@@ -2,6 +2,7 @@ naming conventions:
 # PHP
 functions: snake_case
 classes: PascalCase
+files: snake_case
 
 # C++
 functions: camelCase
@@ -15,5 +16,16 @@ use as short initializers as possible.
 int exampleVal{};
 glm::vec3 exampleVector{0,1,2};
 
-proper function names:
-describe what it does. don't give any unnecessary information about inner workings.
+# javascript
+functions: camelCase
+classes: PascalCase
+files: snake_case
+
+# any language
+
+## proper function names
+describe what it does. don't give any unnecessary information about inner workings or what it's needed for. you never know if it might be used for something else.
+
+## DRY
+
+
