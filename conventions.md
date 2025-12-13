@@ -52,5 +52,11 @@ files: snake_case
 
 ## proper function names
 describe what it does. don't give any unnecessary information about inner workings or what it's needed for. you never know if it might be used for something else.
+bad:
+do not abbreviate names except if they're used a lot and it's obvious what it means.
+bad:
+for(int i = 0; i < 100; i++){}
+good:
+for(int cellIndex = 0; cellIndex < 100; cellIndex++){}
 
 ## DRY
