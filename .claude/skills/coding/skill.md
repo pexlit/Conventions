@@ -8,10 +8,6 @@ allowed-tools:
   - Edit
   - Glob
   - Grep
-  - ls
-  - unzip
-  - conan
-  - ninja
 ---
 
 # Coding Skill
