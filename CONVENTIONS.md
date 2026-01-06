@@ -31,7 +31,7 @@ folder names are singular and snake_case.
 
 each struct and enum should have it's own file.
 
-files of more than 1000 lines are PROHIBITED. they probably contain multiple violations of the conventions and do not actually reflect the intention of the author.
+files of more than 1000 lines are PROHIBITED. they probably contain multiple violations of the conventions and do not actually reflect the intention of the author. they make files hard to read and edit.
 
 ## validation
 don't implement checks if not necessary.
