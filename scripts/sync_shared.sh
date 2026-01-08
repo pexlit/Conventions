@@ -10,7 +10,7 @@ BRANCH="main"
 BASE_URL="https://raw.githubusercontent.com/$REPO/$BRANCH"
 API_URL="https://api.github.com/repos/$REPO/contents"
 SELF="$(realpath "$0")"
-BASE_DIR=".."
+BASE_DIR="."
 
 # Self-update and re-exec if not already updated
 if [ "$1" != "--updated" ]; then
