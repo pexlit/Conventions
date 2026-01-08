@@ -14,7 +14,7 @@ SELF="$(realpath "$0")"
 # Self-update and re-exec if not already updated
 if [ "$1" != "--updated" ]; then
     echo "Updating sync_shared.sh..."
-    curl -fsSL "$BASE_URL/sync_shared.sh" -o "$SELF.tmp"
+    curl -fsSL "$BASE_URL/scripts/sync_shared.sh" -o "$SELF.tmp"
     mv "$SELF.tmp" "$SELF"
     chmod +x "$SELF"
     exec "$SELF" --updated
@@ -56,7 +56,7 @@ download_dir ".claude" ".claude"
 echo "Updating .gitignore..."
 touch .gitignore
 
-for entry in "CONVENTIONS.md" ".claude/" "sync_shared.sh"; do
+for entry in "CONVENTIONS.md" ".claude/" "scripts/sync_shared.sh"; do
     if ! grep -qxF "$entry" .gitignore; then
         echo "$entry" >> .gitignore
         echo "  Added $entry to .gitignore"
