@@ -47,6 +47,7 @@ download_dir() {
 
 # Download CONVENTIONS.md
 echo "Downloading CONVENTIONS.md..."
+echo "command: curl -fsSL "$BASE_URL/CONVENTIONS.md" -o ${BASE_DIR}/CONVENTIONS.md"
 curl -fsSL "$BASE_URL/CONVENTIONS.md" -o ${BASE_DIR}/CONVENTIONS.md
 
 # Download .claude/ folder recursively
@@ -55,7 +56,7 @@ download_dir ".claude" "${BASE_DIR}/.claude"
 
 # Add synced files to .gitignore if not already present
 echo "Updating .gitignore..."
-touch .gitignore
+touch $BASE_DIR/.gitignore
 
 for entry in "CONVENTIONS.md" ".claude/" "scripts/sync_shared.sh"; do
     if ! grep -qxF "$entry" .gitignore; then
